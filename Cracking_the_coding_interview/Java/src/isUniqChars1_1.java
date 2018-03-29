@@ -37,6 +37,7 @@ public class isUniqChars1_1 {
 		int checker = 0;
 		for (int i = 0; i<str.length(); i++)
 		{
+			//소문자만 있다고 가정했기 대문에 'a'를 빼줌, 비트 연산 수를 줄여주기 위해
 			int val  = str.charAt(i) - 'a';
 			//System.out.println(val);
 			//System.out.println("***"+ (int)str.charAt(i));
