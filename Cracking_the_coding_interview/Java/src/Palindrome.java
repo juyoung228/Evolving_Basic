@@ -52,7 +52,7 @@ public class Palindrome {
 	}	
 	
 	public static void main (String[] args) {
-		String pali = "Rats live onnnfg no evil star";
+		String pali = "Random words";
 		System.out.println(isPermutationOfPalindrome(pali));
 	}
 }
