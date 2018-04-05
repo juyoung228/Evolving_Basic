@@ -1,5 +1,5 @@
 
-public class Palindrome {
+public class Palindrome1_4 {
 
 	//ref: the book
 	public static boolean isPermutationOfPalindrom(String phrase) {
