@@ -1,5 +1,5 @@
 
-public class Compression {
+public class Compression1_6 {
 	/**
 	 * ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2001.%20Arrays%20and%20Strings/Q1_06_String_Compression/QuestionA.java
 	 * StringBuffer vs String in java: https://novemberde.github.io/2017/04/15/String_0.html

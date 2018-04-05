@@ -1,5 +1,5 @@
 
-public class OneModify {
+public class OneModify1_5 {
 
 	
 	public static boolean oneEditReplace(String s1, String s2){
