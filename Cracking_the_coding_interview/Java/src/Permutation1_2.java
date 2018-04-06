@@ -1,5 +1,5 @@
 
-public class permutation1_2 {
+public class Permutation1_2 {
 
 	public static String sort(String s)
 	{

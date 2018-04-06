@@ -1,5 +1,5 @@
 
-public class isUniqChars1_1 {
+public class UniqChars1_1 {
 	
 	/*참고
 	 * 비트연산 (Shift): http://egloos.zum.com/js7309/v/11128720

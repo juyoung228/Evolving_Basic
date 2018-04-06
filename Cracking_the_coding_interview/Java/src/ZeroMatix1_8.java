@@ -94,10 +94,18 @@ public class ZeroMatix1_8 {
 		}
 		
 		//Nullify rows based on values in the first column
-		for (int j = 1; j < matrix.length; j++) {
+		for (int j = 1; j < matrix[0].length; j++) {
 			if (matrix[0][j] == 0) {
 				nullifyColumn(matrix, j);
 			}
+		}
+		
+		if (rowHasZero){
+			nullifyRow(matrix, 0);
+		}
+		
+		if (colHasZero) {
+			nullifyColumn(matrix, 0);
 		}
 		return matrix;
 		
@@ -118,14 +126,14 @@ public class ZeroMatix1_8 {
 		
 		
 		
-		int[][] sample2 = { {1,0,3},
-	   						{2,3,4},
-	   						{3,4,5}};
+		int[][] sample2 = { {1,5,2,3},
+	   						{2,3,0,4},
+	   						{3,4,4,5}};
 		int [][] result2 = setZeros2(sample2);
-		for (int i = 0; i < result.length; i++) {		
+		for (int i = 0; i < result2.length; i++) {		
 			System.out.println();
-			for (int j = 0; j < result.length; j++) {
-				System.out.print(result[i][j] + " ");
+			for (int j = 0; j < result2[0].length; j++) {
+				System.out.print(result2[i][j] + " ");
 			}
 		}	
 	}
