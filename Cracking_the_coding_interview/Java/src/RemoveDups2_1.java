@@ -4,7 +4,9 @@ import java.util.HashSet;
 public class RemoveDups2_1 {
 	
 	//ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_01_Remove_Dups/QuestionA.java
-	public static void deleteDups(LinkedListNode n) {
+	//O(N)
+	//assume that there is buffer
+	public static void deleteDups_1(LinkedListNode n) {
 		HashSet<Integer> set = new HashSet<Integer>();
 		LinkedListNode previous = null;
 		while (n != null) {
@@ -16,7 +18,25 @@ public class RemoveDups2_1 {
 			}
 			n = n.next;
 		}
+	}
+	//ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_01_Remove_Dups/QuestionB.java
+	//O(N)
+	//assume that there is no buffer
+	public static void deleteDups_2(LinkedListNode n) {
+		LinkedListNode current = n;
+		while (current != null) {
+			/* Remove all future nodes that have the same value */
+			LinkedListNode runner = current;
+			while (runner.next != null) { 
+				if (runner.next.data == current.data) {
+					runner.next = runner.next.next;
+				} else {
+					runner = runner.next;
+				}
+			}
+			current = current.next;
 }
+	}
 
 	//ref: https://github.com/careercup/ctci/blob/master/java/CtCILibrary/CtCILibrary/LinkedListNode.java
 	public static class LinkedListNode {
@@ -78,7 +98,8 @@ public class RemoveDups2_1 {
 			first = second;
 		}
 		System.out.println(head.printForward());
-		deleteDups(head);
+		//deleteDups_1(head);
+		deleteDups_2(head);
 		System.out.println(head.printForward());
 }
 	
