@@ -3,6 +3,7 @@ import java.util.HashSet;
 
 public class RemoveDups2_1 {
 	
+	//ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_01_Remove_Dups/QuestionA.java
 	public static void deleteDups(LinkedListNode n) {
 		HashSet<Integer> set = new HashSet<Integer>();
 		LinkedListNode previous = null;
