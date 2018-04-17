@@ -1,6 +1,6 @@
 import utils.LinkedListNode;
 
-public class PintingLast2_2 {
+public class PrintingLast2_2 {
 	
 	/**
 	 * use recursive, Space complexity O(N)
@@ -52,7 +52,7 @@ public class PintingLast2_2 {
 	 * iterative way 
 	 * Time:O(N), Space: O(1)
 	 **/
-	public static LinkedListNode nthToLast(LinkedListNode head, int k) {
+	public static LinkedListNode kthToLast_3(LinkedListNode head, int k) {
 		LinkedListNode p1 = head;
 		LinkedListNode p2 = head;
 		
@@ -98,8 +98,16 @@ public class PintingLast2_2 {
 		for (int i = 1; i <= array.length; i++) {
 			LinkedListNode node = kthToLast_2(head2, i);
 			String nodeValue = ""+ node.data;
-			//String nodeValue = node == null ? "null" : "" + node.data;
 			System.out.println(i + "th to last node is " + nodeValue);
 		}
+		
+		System.out.println("====================================");
+		LinkedListNode head3 = createLinkedListFromArray(array);
+		for (int i = 1; i <= array.length; i++) {
+			LinkedListNode node = kthToLast_2(head3, i);
+			String nodeValue = ""+ node.data;
+			System.out.println(i + "th to last node is " + nodeValue);
+		}
+		
 }
 }
