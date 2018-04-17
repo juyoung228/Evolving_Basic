@@ -35,7 +35,7 @@ public class RemoveDups2_1 {
 				}
 			}
 			current = current.next;
-}
+		}
 	}
 
 	//ref: https://github.com/careercup/ctci/blob/master/java/CtCILibrary/CtCILibrary/LinkedListNode.java
@@ -84,7 +84,7 @@ public class RemoveDups2_1 {
 			}
 			LinkedListNode head2 = new LinkedListNode(data, next2, null);
 			return head2;
-	}
+		}
 	}
 
 	public static void main(String[] args) {	
