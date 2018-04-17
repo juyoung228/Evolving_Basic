@@ -8,11 +8,11 @@ public class PrintingLast2_2 {
 	 * ref: https://github.com/careercup/CtCI-6th-Edition/tree/master/Java/Ch%2002.%20Linked%20Lists/Q2_02_Return_Kth_To_Last/QuestionA.java
 	 **/
 
-	public static int printKthToLast_1(LinkedListNode head, int k) {
+	public static int printKthToLast(LinkedListNode head, int k) {
 		if (head == null) {
 			return 0;
 		}
-		int index = printKthToLast_1(head.next, k) + 1;
+		int index = printKthToLast(head.next, k) + 1;
 		if (index == k) {
 			System.out.println(k + "th to last node is " + head.data);
 		}
@@ -30,16 +30,16 @@ public class PrintingLast2_2 {
 	}
 	
 	//overloading because in java, 2 return values doesn't exist.
-	public static LinkedListNode kthToLast_2(LinkedListNode head, int k) {
+	public static LinkedListNode kthToLast(LinkedListNode head, int k) {
 		Index idx = new Index();
-		return kthToLast_2(head, k, idx);
+		return kthToLast(head, k, idx);
 	}
 	
-	public static LinkedListNode kthToLast_2(LinkedListNode head, int k, Index idx) {
+	public static LinkedListNode kthToLast(LinkedListNode head, int k, Index idx) {
 		if (head == null) {
 			return null;
 		}
-		LinkedListNode node = kthToLast_2(head.next, k, idx);
+		LinkedListNode node = kthToLast(head.next, k, idx);
 		idx.value = idx.value + 1;
 		if (idx.value == k) {
 			return head;
@@ -52,7 +52,7 @@ public class PrintingLast2_2 {
 	 * iterative way 
 	 * Time:O(N), Space: O(1)
 	 **/
-	public static LinkedListNode kthToLast_3(LinkedListNode head, int k) {
+	public static LinkedListNode kthToLast_2(LinkedListNode head, int k) {
 		LinkedListNode p1 = head;
 		LinkedListNode p2 = head;
 		
@@ -89,14 +89,14 @@ public class PrintingLast2_2 {
 		int[] array = {0, 1, 2, 3, 4, 5, 6};
 		LinkedListNode head = createLinkedListFromArray(array);
 		for (int i = 0; i <= array.length + 1; i++) {
-			printKthToLast_1(head, i);
+			printKthToLast(head, i);
 		}
 
 		System.out.println("====================================");
 		
 		LinkedListNode head2 = createLinkedListFromArray(array);
 		for (int i = 1; i <= array.length; i++) {
-			LinkedListNode node = kthToLast_2(head2, i);
+			LinkedListNode node = kthToLast(head2, i);
 			String nodeValue = ""+ node.data;
 			System.out.println(i + "th to last node is " + nodeValue);
 		}
