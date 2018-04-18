@@ -20,7 +20,7 @@ public class Partition2_4 {
 			if (node.data < x) {
 				if (beforeStart == null) {
 					beforeStart = node;
-					beforeEnd = beforeStart;
+					beforeEnd = node;
 				} else {
 					beforeEnd.next = node;
 					beforeEnd = node;
@@ -28,7 +28,7 @@ public class Partition2_4 {
 			} else {
 				if (afterStart == null) {
 					afterStart = node;
-					afterEnd = afterStart;
+					afterEnd = node;
 				} else {
 					afterEnd.next = node;
 					afterEnd = node;
@@ -123,13 +123,13 @@ public class Partition2_4 {
 		//33->9->2->3->10->10389->838->874578->5
 		
 		/* Partition */
-		//LinkedListNode h = partition(head, 3);
+		LinkedListNode h = partition(head, 3);
 		//2->33->9->3->10->10389->838->874578->5
 		
 		//LinkedListNode h = partition2(head, 3);
 		//2->5->874578->838->10389->10->3->9->33
 
-		LinkedListNode h = partition3(head,3);
+		//LinkedListNode h = partition3(head,3);
 		//2->33->9->3->10->10389->838->874578->5
 
 		System.out.println(h.printForward());
