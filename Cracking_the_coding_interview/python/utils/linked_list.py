@@ -74,7 +74,7 @@ ref: https://github.com/careercup/CtCI-6th-Edition-Python/blob/e6bc732588601d0a9
 '''
 class LinkedListNode:
 
-    def __init__(self, value, nextNode=None, prevNode=None):
+    def __init__(self, value=None, nextNode=None, prevNode=None):
         self.value = value
         self.next = nextNode
         self.prev = prevNode
