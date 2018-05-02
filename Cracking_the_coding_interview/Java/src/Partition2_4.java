@@ -1,7 +1,8 @@
 import utils.LinkedListNode;
 
 public class Partition2_4 {
-
+	//there is a PPT for the class
+	
 	/**
 	 *The method is stable because the order of items is consistent
 	 *using 4 variables
