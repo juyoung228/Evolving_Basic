@@ -47,7 +47,7 @@ public class Partition2_4 {
 	}
 	
 	/**
-	 * make 'new' list using existing nodes
+	 * doesn't keep the order of items in LL
 	 * ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_04_Partition/QuestionB.java
 	 **/
 	
@@ -85,6 +85,7 @@ public class Partition2_4 {
 	
 	
 	/**
+	 * make 'new' list using existing nodes
 	 * ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_04_Partition/QuestionC.java
 	 **/
 	public static LinkedListNode partition3(LinkedListNode node, int x) {
@@ -123,13 +124,13 @@ public class Partition2_4 {
 		//33->9->2->3->10->10389->838->874578->5
 		
 		/* Partition */
-		LinkedListNode h = partition(head, 3);
+		//LinkedListNode h = partition(head, 3);
 		//2->33->9->3->10->10389->838->874578->5
 		
 		//LinkedListNode h = partition2(head, 3);
 		//2->5->874578->838->10389->10->3->9->33
 
-		//LinkedListNode h = partition3(head,3);
+		LinkedListNode h = partition3(head,3);
 		//2->33->9->3->10->10389->838->874578->5
 
 		System.out.println(h.printForward());
