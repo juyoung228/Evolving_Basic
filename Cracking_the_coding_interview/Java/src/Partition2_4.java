@@ -62,6 +62,7 @@ public class Partition2_4 {
 				/* Insert node into start of before list */
 				node.next = beforeStart;
 				beforeStart = node;	
+
 			} else {
 				/* Insert node into front of after list */
 				node.next = afterStart;
@@ -114,7 +115,8 @@ public class Partition2_4 {
 	
 	public static void main(String[] args) {
 		/* Create linked list */
-		int[] vals = {33,9,2,3,10,10389,838,874578,5};
+		//int[] vals = {33,9,2,3,10,10389,838,874578,5};
+		int[] vals = {6, 4, 5, 3};
 		LinkedListNode head = new LinkedListNode(vals[0], null, null);
 		LinkedListNode current = head;
 		for (int i = 1; i < vals.length; i++) {
@@ -127,12 +129,22 @@ public class Partition2_4 {
 		//LinkedListNode h = partition(head, 3);
 		//2->33->9->3->10->10389->838->874578->5
 		
+		//LinkedListNode h = partition(head, 5);
+		//4->3->6->5
+		
+		
 		//LinkedListNode h = partition2(head, 3);
 		//2->5->874578->838->10389->10->3->9->33
+		
+		//LinkedListNode h = partition2(head, 5);
+		//3->4->5->6
 
-		LinkedListNode h = partition3(head,3);
+		
+		//LinkedListNode h = partition3(head,3);
 		//2->33->9->3->10->10389->838->874578->5
-
+		
+		LinkedListNode h = partition3(head,5);
+		//3->4->6->5
 		System.out.println(h.printForward());
 }
 }
