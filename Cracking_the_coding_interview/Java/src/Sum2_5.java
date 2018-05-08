@@ -3,7 +3,7 @@ import utils.LinkedListNode;
 public class Sum2_5 {
 
 	//ref: https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_05_Sum_Lists/QuestionA.java
-	private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
+	private static LinkedListNode addLists_1(LinkedListNode l1, LinkedListNode l2, int carry) {
 		if (l1 == null && l2 == null && carry == 0) {
              return null;
 		}
@@ -18,11 +18,23 @@ public class Sum2_5 {
 		}
 		result.data = value % 10;
 		if (l1 != null || l2 != null) {
-			LinkedListNode more = addLists(l1 == null ? null : l1.next, 
+			LinkedListNode more = addLists_1(l1 == null ? null : l1.next, 
 										   l2 == null ? null : l2.next, 
 										   value >= 10 ? 1 : 0);
 			result.setNext(more);
 		}
+		
+		/*
+		 *  ternary operation of JAVA
+		      result = a > b ? x : y;
+		      
+		      if (a > b) {
+       				result = x;
+   				} else {
+       				result = y;
+   				}
+		 */
+		
 		return result;
 	}
 	
@@ -43,7 +55,7 @@ public class Sum2_5 {
 		LinkedListNode lB2 = new LinkedListNode(0, null, lB1);
 		LinkedListNode lB3 = new LinkedListNode(0, null, lB2);	
 		
-		LinkedListNode list3 = addLists(lA1, lB1, 0);
+		LinkedListNode list3 = addLists_1(lA1, lB1, 0);
 		
 		System.out.println("  " + lA1.printForward());		
 		System.out.println("+ " + lB1.printForward());			
