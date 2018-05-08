@@ -13,7 +13,17 @@ public class LinkedListNode {
 			setPrevious(p);
 		}
 		
-		public LinkedListNode() { }
+
+		public LinkedListNode() {
+			// TODO Auto-generated constructor stub
+		}
+
+
+		public LinkedListNode(int d) {
+			// TODO Auto-generated constructor stub
+			data = d;
+		}
+
 
 		public void setNext(LinkedListNode n) {
 			next = n;
