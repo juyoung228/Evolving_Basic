@@ -50,6 +50,8 @@ public class Sum2_5 {
 	
 	
 	
+	
+	//Wrapper to return sum and carry in recursive method
 	public static class PartialSum {
 		public LinkedListNode sum = null;
 		public int carry = 0;
@@ -62,6 +64,7 @@ public class Sum2_5 {
 			return 1 + length(l.next);
 		}
 	}
+	
 	
 	private static PartialSum addListsHelper(LinkedListNode l1, LinkedListNode l2) {
 		if (l1 == null && l2 == null) {
@@ -79,6 +82,8 @@ public class Sum2_5 {
 	private static LinkedListNode addLists_2(LinkedListNode l1, LinkedListNode l2) {
 		int len1 = length(l1);
 		int len2 = length(l2);
+		
+		//add '0' at the shorter list
 		if (len1 < len2) {
 			l1 = padList(l1, len2 - len1);
 		} else {
