@@ -79,6 +79,7 @@ public class Palindrome2_6 {
 	/**
 	 * the 3rd solution: recursive  way 
 	 * ref: https://github.com/juyoung228/CtCI-6th-Edition/blob/master/Java/Ch%2002.%20Linked%20Lists/Q2_06_Palindrome/QuestionC.java
+	 * explain the code at 2.6.Palindrome.pptx
 	 **/
 	
 	public static class Result {
