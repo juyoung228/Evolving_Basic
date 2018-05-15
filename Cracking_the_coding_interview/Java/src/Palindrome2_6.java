@@ -43,7 +43,7 @@ public class Palindrome2_6 {
 	 * (assume that we don't know length of the list)
 	 **/
 	
-	boolean isPalindrome2(LinkedListNode head){
+	static boolean isPalindrome2(LinkedListNode head){
 		LinkedListNode fast = head;
 		LinkedListNode slow = head;
 		
@@ -96,6 +96,8 @@ public class Palindrome2_6 {
 		
 		LinkedListNode head = nodes[0];
 		System.out.println(head.printForward());
-		System.out.println(isPalindrome(head));
+		//System.out.println(isPalindrome(head));
+		System.out.println(isPalindrome2(head));
+
 	}
 }
