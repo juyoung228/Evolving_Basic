@@ -1,5 +1,6 @@
 
 import utils.LinkedListNode;
+import java.util.Stack;
 
 public class Palindrome2_6 {
 
@@ -35,6 +36,44 @@ public class Palindrome2_6 {
 		return one == null && two == null;
 	}
 	
+	
+	/**
+	 * the 2nd solution: iterate the list by using 
+	 * fast runner and slow runner with stack
+	 * (assume that we don't know length of the list)
+	 **/
+	
+	boolean isPalindrome2(LinkedListNode head){
+		LinkedListNode fast = head;
+		LinkedListNode slow = head;
+		
+		Stack stack = new Stack();
+		
+		while (fast != null && fast.next != null) {
+			stack.push(slow.data);
+			slow = slow.next;
+			fast = fast.next.next;
+			/*Fast runner is faster as two times as
+             *the slow runner is, so if the fast runner
+             *reach the end of the list, it means that
+             *the slow runner is located at the center of the list
+			 */
+		}
+		
+		/*if # of the list is odd, skip the central node*/
+		if (fast != null) {
+			slow = slow.next;
+		}
+		
+		while (slow != null) {
+			int top = Integer.parseInt(stack.pop().toString());
+			if (top != slow.data) {
+				return false;
+			}
+			slow = slow.next;
+		}
+		return true;
+	}
 	
 	public static void main(String[] args) {
 		int length = 9;
