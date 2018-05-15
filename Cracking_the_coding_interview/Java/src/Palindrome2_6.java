@@ -4,9 +4,8 @@ import utils.LinkedListNode;
 public class Palindrome2_6 {
 
 	/**
-	 * 1st solution: reverse the list and check 
+	 * the 1st solution: reverse the list and check 
 	 * whether the reversed one is same with the original one.
-	 * 
 	 **/
 	
 	static boolean isPalindrome(LinkedListNode head) {
