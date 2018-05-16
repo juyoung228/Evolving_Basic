@@ -1,5 +1,5 @@
 
-public class Rotation_2 {
+public class CyclicRotation_2 {
 
 	// you can also use imports, for example:
 	// import java.util.*;
@@ -13,7 +13,7 @@ public class Rotation_2 {
 	        
 	        //lengths are same each other 
 	        int len = A.length;
-	        if ( len == 0 || K/len == 0) {
+	        if ( len == 0 || K%len == 0) {
 	            return A;
 	        }
 	        
@@ -26,7 +26,7 @@ public class Rotation_2 {
 	        int ki = 0;
 	        while (ki < K){
 	            for (int i = 0; i < len; i++) {
-	                result[i] = temp[(len-1+i)/len];
+	                result[i] = temp[(len-1+i)%len];
 	            }
 	            
 	            ki ++;
