@@ -38,5 +38,8 @@ public class CyclicRotation_2 {
 	    }
 	}
 	
+	/*test code should be here,
+	 * watch out the empty array!*/
+	
 	
 }
