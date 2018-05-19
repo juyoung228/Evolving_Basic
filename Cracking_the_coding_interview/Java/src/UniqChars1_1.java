@@ -2,6 +2,7 @@
 public class UniqChars1_1 {
 	
 	/*참고
+	 * https://github.com/juyoung228/Evolving_Basic/blob/master/Concept/Bit%20Manipulation.ipynb
 	 * 비트연산 (Shift): http://egloos.zum.com/js7309/v/11128720
 	 * 비트 마스크: http://oniondev.egloos.com/9839582
 	 * */
