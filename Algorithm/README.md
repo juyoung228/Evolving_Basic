@@ -1,14 +1,14 @@
-|  Algorithm |  Application |  O(N):time |  O(N):space |  Source (Python) |  Source (Java) |
+|  Algorithm |  Application | Complexity |  Source (Python) |  Source (Java) |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| Bubble Sort | | | | | | 
-| Insertion Sort | | | | | |
-| Selection Sort| | | | | |
-| Quick Sort| | | | | |
-| Heap Sort| | | | | |
-| Breadth First Search| | | | | |
-| Depth First Search| | | | | |
-| Merge Sort| | | | | |
-| Binary Search| | | | | |
+| Bubble Sort | already sorted | best: O(N) |[bubble_sort] https://github.com/juyoung228/Evolving_Basic/blob/master/Algorithm/Source%20Code/Python/bubble_sort.ipynb | | 
+| Insertion Sort | | | | |
+| Selection Sort| | | | |
+| Quick Sort| | | | |
+| Heap Sort| | | | |
+| Breadth First Search| | | | |
+| Depth First Search| | | | |
+| Merge Sort| | | | |
+| Binary Search| | | | |
 
 
 
