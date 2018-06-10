@@ -11,6 +11,9 @@
 | Binary Search | | | | [binary_search](https://github.com/juyoung228/Evolving_Basic/blob/master/Algorithm/Source%20Code/Python/binary_search.ipynb) | |
 | lru | | | | [least_recently_used](https://github.com/juyoung228/Evolving_Basic/blob/master/Algorithm/Source%20Code/Python/least_recently_used.ipynb) | |
 | dijkstra | | | | [dijkstra](https://github.com/juyoung228/Evolving_Basic/blob/master/Algorithm/Source%20Code/Python/dijkstra.ipynb) | |
+| best first search | | | | | |
+| optimal search | | | | | |
+
 
 
 
