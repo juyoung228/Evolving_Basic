@@ -1,7 +1,7 @@
 <b>The repository is for everybody who wants to learn basic things for developers. Please freely contact and send pull request to me!</b>
 
 # Algorithm
-* bubble sort, insertion sort, selection sort, quick sort, heap sort, merge sort, breadth first search, depth first search, binary search, lru, dijkstra
+* bubble sort, insertion sort, selection sort, quick sort, heap sort, merge sort, breadth first search, depth first search, binary search, lru, dijkstra, A*
 
 # Concept
 * Bit Manipulation, Graph(planned)
