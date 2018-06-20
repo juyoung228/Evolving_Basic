@@ -1,4 +1,5 @@
 <b>The repository is for everybody who wants to learn basic things for developers. </b>
+
 Please freely contact and send pull request to me!
 
 # Algorithm
