@@ -4,7 +4,7 @@
 * bubble sort, insertion sort, selection sort, quick sort, heap sort, merge sort, breadth first search, depth first search, binary search, lru, dijkstra, A* (planned)
 
 # Concept
-* Bit Manipulation, OOP, Graph(planned), Dynamic Programming(planned)
+* Bit Manipulation, OOP, Dynamic Programming, Graph(planned)
 
 # Cracking the coding interview
 * [Java](https://github.com/juyoung228/Evolving_Basic/tree/master/Cracking_the_coding_interview/Java/src) (~2.7.intersection)
