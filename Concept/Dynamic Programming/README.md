@@ -5,4 +5,4 @@
 - Overview
 - Practice
 - Fibonacci Numbers
-- Makung changes
+- Making changes
