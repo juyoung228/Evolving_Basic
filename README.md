@@ -20,4 +20,3 @@
 * bytebybyte
 * kakao
 * etc
-
