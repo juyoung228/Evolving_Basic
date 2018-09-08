@@ -12,7 +12,7 @@
 * [Python](https://github.com/juyoung228/Evolving_Basic/tree/master/Cracking_the_coding_interview/python) (~2.7.intersection)
 
 # Data_Structure
-* LinkedList, Stack, Queue, Binary Tree, DoubleLinkedList(planned), HashMap(planned), HashSet(planned), Bit vector(planned), Trie(planned)
+* LinkedList, Stack, Queue, Binary Tree, DoubleLinkedList(planned), HashMap(planned), HashSet(planned), Bit vector, Trie(planned)
 
 # Questions
 * Codility
