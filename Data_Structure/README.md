@@ -7,3 +7,4 @@
 | HashMap | |  |  |  | |
 | HashSet | |  | |  | |
 | Bit vector |  |  |  |   |  | 
+| Binary tree | O(logN): Search</br>O(logN): remove</br>O(logN): add |  |  |   |  | 
