@@ -1,5 +1,6 @@
-#https://www.youtube.com/watch?v=7C9RgOcvkvo&t=225s
+#source https://www.youtube.com/watch?v=7C9RgOcvkvo&t=225s
 #list로 구현 가능하나 시간 복잡도가 더 높아지므 deque 라이브러리 사용
+#https://wellsw.tistory.com/122 
 from collections import deque
 
 queue = deque()
