@@ -63,32 +63,87 @@ visited = [False] * len(graph)
 # DFS 시작
 dfs_recursive(graph, 0, visited)
 
+# 단일경로 찾기 문제
+def find_path(graph, start, end, path=[]):
+    # 현재 노드를 경로에 추가
+    path = path + [start]
+    
+    # 시작 노드가 끝 노드에 도달하면 경로 반환
+    if start == end:
+        return path
+    
+    # 경로를 찾을 수 없으면 None 반환
+    if start not in graph:
+        return None
+    
+    # 모든 인접 노드를 순회
+    for neighbor in graph[start]:
+        if neighbor not in path:  # 이미 방문한 노드는 제외
+            new_path = find_path(graph, neighbor, end, path)
+            if new_path:  # 유효한 경로를 찾으면 반환
+                return new_path
+    
+    return None  # 경로를 찾지 못하면 None 반환
 
-# 2D 배열에서 연결된 섬의 개수 구하기
-grid = [
-    [1, 1, 0, 0],
-    [1, 0, 0, 1],
-    [0, 0, 1, 1],
-    [0, 1, 1, 0]
-]
+# 그래프 (인접 리스트)
+graph = {
+    0: [1, 2],
+    1: [0, 3, 4],
+    2: [0, 5, 6],
+    3: [1],
+    4: [1],
+    5: [2],
+    6: [2]
+}
 
-def dfs_islands(x, y):
-    if x < 0 or x >= len(grid) or y < 0 or y >= len(grid[0]) or grid[x][y] == 0:
-        return
-    grid[x][y] = 0  # 방문 처리
-    # 상하좌우 탐색
-    dfs_islands(x-1, y)
-    dfs_islands(x+1, y)
-    dfs_islands(x, y-1)
-    dfs_islands(x, y+1)
+# 시작점과 끝점을 설정
+start_node = 0
+end_node = 6
 
-num_islands = 0
-for i in range(len(grid)):
-    for j in range(len(grid[0])):
-        if grid[i][j] == 1:
-            dfs_islands(i, j)
-            num_islands += 1
-
-print("섬의 개수:", num_islands)
+# 경로 탐색
+path = find_path(graph, start_node, end_node)
+print("단일 경로:", path)
 
 
+#모든 경로 찾기 문제
+def find_all_paths(graph, start, end, path=[]):
+    # 현재 노드를 경로에 추가
+    path = path + [start]
+    
+    # 시작 노드가 끝 노드에 도달하면 현재 경로 반환
+    if start == end:
+        return [path]
+    
+    # 시작 노드가 그래프에 없으면 빈 리스트 반환
+    if start not in graph:
+        return []
+    
+    paths = []  # 모든 경로를 저장할 리스트
+    for neighbor in graph[start]:
+        if neighbor not in path:  # 이미 방문한 노드는 제외
+            new_paths = find_all_paths(graph, neighbor, end, path)
+            for new_path in new_paths:
+                paths.append(new_path)
+    
+    return paths
+
+# 그래프 (인접 리스트)
+graph = {
+    0: [1, 2],
+    1: [0, 3, 4],
+    2: [0, 5, 6],
+    3: [1],
+    4: [1],
+    5: [2],
+    6: [2]
+}
+
+# 시작점과 끝점을 설정
+start_node = 0
+end_node = 6
+
+# 모든 경로 탐색
+all_paths = find_all_paths(graph, start_node, end_node)
+print("모든 경로:")
+for path in all_paths:
+    print(path)
