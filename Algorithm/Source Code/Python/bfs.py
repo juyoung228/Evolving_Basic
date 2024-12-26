@@ -50,3 +50,40 @@ graph = [
 start_node = 0
 result = bfs(graph, start_node)
 print("BFS 탐색 결과:", result)
+
+
+#최단 경로 구하기, 거리 정보 추가로 기록
+def bfs_shortest_path(graph, start, target):
+    visited = [False] * len(graph)
+    queue = deque([(start, 0)])  # 큐에 (노드, 거리) 저장
+    visited[start] = True
+
+    while queue:
+        node, distance = queue.popleft()
+
+        # 목표 노드에 도달하면 거리 반환
+        if node == target:
+            return distance
+
+        # 인접 노드 확인
+        for neighbor in graph[node]:
+            if not visited[neighbor]:
+                queue.append((neighbor, distance + 1))
+                visited[neighbor] = True
+
+    return -1  # 목표 노드에 도달할 수 없는 경우
+
+# 그래프
+graph = [
+    [1, 2],
+    [0, 3],
+    [0, 3],
+    [1, 2, 4],
+    [3]
+]
+
+# 최단 거리 계산
+start_node = 0
+target_node = 4
+shortest_distance = bfs_shortest_path(graph, start_node, target_node)
+print("최단 거리:", shortest_distance)
